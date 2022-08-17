@@ -98,13 +98,20 @@ for (let i = 0; i < posts.length; i++) {
     // let k = 1
     // const likeButton = document.querySelector()
     let likeButton = document.querySelector(`[data-postid="${posts[i].id}"]`);
-    console.log(likeButton)
-    likeButton.addEventListener('click',liked)
-    function liked () {
-        likeButton.classList.add('like-button--liked')
-        // posts[i].likes = parseInt(posts[i].likes) + k
-    }
+    console.log(likeButton, likeButton.classList)
+    likeButton.addEventListener('click', liked)
 }
+    
+    
+    
+
+
+function liked () {
+    likeButton.classList.add('like-button--liked')
+    return true
+    // posts[i].likes = parseInt(posts[i].likes) + k
+}
+
 
      
     
