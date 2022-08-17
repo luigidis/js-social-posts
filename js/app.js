@@ -94,5 +94,27 @@ for (let i = 0; i < posts.length; i++) {
                                             </div>
                                         </div> 
                                     </div>            
-                                </div>` 
+                                </div>`
+    let k = 1
+    const likeButton = document.querySelector('[data-postid="`${posts[i].id}`"]')
+    // const likeButton = document.querySelector('.like-button');
+    console.log(likeButton)
+    likeButton.addEventListener('click',liked)
+    function liked () {
+        
+        likeButton.classList.add('like-button--liked')
+        posts[i].likes = parseInt(posts[i].likes) + k
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+    
+    
