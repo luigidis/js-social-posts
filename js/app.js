@@ -109,15 +109,19 @@ const likedButton = document.querySelectorAll('.js-like-button')
 console.log(likedButton)
 for (let i=0; i< posts.length; i++) {
     console.log(likedButton[i])
-    likedButton[i].addEventListener('click', function () {
-        console.log('ciao')
-    }, liked)
     
+    likedButton[i].addEventListener('click',(event) => {
+        event.preventDefault
+        
+    }, liked)
 }
+    
 // likedButton[i].addEventListener('click', liked)
 function liked () {
-    likedButton[i].classList.add('like-button--liked')
+    this.classList.add('like-button--liked')
+    
     console.log('liked')
+    const post = posts.likes + 1
     // posts[i].likes = parseInt(posts[i].likes) + k
 }
 
